@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ye Htet Profolio </title>
+    <meta name="title" content="Ye Htet Profolio ">
+    <meta name="description" content="Frontend Developer personal profolio website to prove my work">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yehtetprofolio.netlify.app/">
+    <meta property="og:title" content="Ye Htet Profolio ">
+    <meta property="og:description" content="Frontend Developer personal profolio website to prove my work">
+    <meta property="og:image" content="https://yehtetprofolio.netlify.app/assets/profolio_mockup.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Ye Htet Profolio ">
+    <meta property="twitter:description" content="Frontend Developer personal profolio website to prove my work">
+    <meta property="twitter:image" content="https://yehtetprofolio.netlify.app/assets/profolio_mockup.jpg">
+
+    <!-- LOADING SPINNER --> 
+    <style>
+        .center {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1B242F;
+            z-index: 1000;
+        }
+        .wave {
+            width: 5px;
+            height: 100px;
+            background: linear-gradient(45deg, cyan, #fff);
+            margin: 10px;
+            animation: wave 1s linear infinite;
+            border-radius: 20px;
+        }
+        .wave:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        .wave:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        .wave:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+        .wave:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+        .wave:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+        .wave:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+        .wave:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+        .wave:nth-child(9) {
+            animation-delay: 0.8s;
+        }
+        .wave:nth-child(10) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(0);
+            }
+        }
+    </style>   
+    <div class="spinner-wrapper">
+        <div class="center">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+          </div>
+    </div>
+
+    <title>Ye Htet Personal Profolio</title>
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <div class="container-fluid shadow py-3 text-white navbar" >
+        <div class="container">
+            <nav class="d-flex w-100 gap-3 gap-lg-5 justify-content-between justify-content-md-start align-items-center" >
+                <h5 class="my-0"><span class="text-secondary">Y</span>e<span class="text-secondary">H</span>tet</h5>
+                <ul class="flex-grow-1 list-unstyled d-none d-md-flex mb-0">
+                    <li class="nav-item"><a class="text-reset active ms-3 py-3 active text-decoration-none opacity-75" href="#home"><h2 class="absolute-center">Home</h2><h2 class="absolute-center">Home</h2></a></li>
+                    <li class="nav-item"><a class="text-reset ms-3 py-3 text-decoration-none opacity-75" href="#about"><h2 class="absolute-center">About</h2><h2 class="absolute-center">About</h2></a></li>
+                    <li class="nav-item"><a class="text-reset ms-3 py-3 text-decoration-none opacity-75" href="#projects"><h2 class="absolute-center">Projects</h2><h2 class="absolute-center">Projects</h2></a></li>
+                    <li class="nav-item"><a class="text-reset ms-3 py-3 text-decoration-none opacity-75" href="#contact"><h2 class="absolute-center">Contact</h2><h2 class="absolute-center">Contact</h2></a></li>
+                </ul>
+                <label for="router" class="navbar-hire-btn btn btn-outline-success btn-md d-none d-md-block px-4 text-nowrap">
+                    Hire Me
+                </label>
+                <!-- Mobile Menu Toggeler -->
+                <div class="mobile-menu-btn d-block d-md-none">
+                    <div class="line line-1 bg-white"></div>
+                    <div class="line line-2 bg-white"></div>
+                    <div class="line line-3 bg-white"></div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- PAGE ROUTE TOOGLER STARTS -->
+    <input type="checkbox" id="router" name="router" checked>
+    <!-- PAGE ROUTE TOOGLER ENDS-->
+
+    <!-- HIRE ME PAGE STARTS -->
+    <div class="hire-me-page container-fluid d-flex justify-content-center align-items-center vh-100 vw-100 position-fixed top-0 bottom-0 start-0" style="z-index: 2000">
+        <label for="router" class="back-page-btn btn btn-primary">
+            <i class="fa-solid fa-house"></i>
+        </label>
+        <div>
+            <h3 class="text-primary mb-3 display-6">THANKS FOR GIVING ME A CHANCE</h3>
+            <div class="transition-wrapper">
+                <span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span>
+                <div class="outer rounded">
+                    <div class="middle rounded">
+                        <div class="inner rounded">
+                            <div class="inner-most p-3 shadow-sm row rounded">
+                                <div class="col-12">
+                                    <form class="form mb-3" action="mailto:yhtet1934@gmail.com" method="post" enctype="text/plain">
+                                        <small class="fw-bold pb-2 d-block">Send me a Message</small>
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control mb-3" id="floatingName" placeholder="Name">
+                                            <label for="floatingName">Your Name</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control mb-3" id="floatingInput" placeholder="name@example.com">
+                                            <label for="floatingInput">Subject</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control mb-3" id="floatingMessage" rows="20" placeholder="Message"></textarea>
+                                            <label for="floatingMessage">Message</label>
+                                        </div>
+                                        <input type="submit" value="Send" class="hire-message-submit btn btn-outline-primary w-100" >
+                                    </form>
+                                </div>
+                                <div class="col-12">
+                                    <small class="fw-bold pb-2 d-block">Directly make me a call</small>
+                                    <div class="call-me d-flex align-items-center justify-content-between">
+                                        <span>+959780209363</span>
+                                        <a href="tel:959780209363" class="text-decoration-none">
+                                            <button type="button" class="btn btn-outline-primary">
+                                                <i class="fa-solid fa-phone-flip"></i> Call Now
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HIRE ME PAGE ENDS -->
+
+    <main>
+        
+        <!-- HERO SECTION STARTS  -->
+        <section class="container-fluid vh-100 p-0 d-flex justify-content-center align-items-center" id="home">
+            <div class="canvas-container">
+                <canvas id="hero-canvas"></canvas>
+            </div>
+            <div class="container text-start text-sm-center hero-content">
+                <h1 class="title mb-2"><span class="hello">Hello,</span> <span class="text"></span></h1>
+                <p class="description"><span>Transform</span> <span>your</span> <span>business</span> <span>idea</span> <span>to</span> <span>an</span> <span>outstanding</span> <span>fully</span> <span>functional</span> <span>website</span> <br class="d-none d-lg-block"> <span>with</span> <span>me</span> <span>and</span> <span>make</span> <span>it</span> <span>successful.</span></p>
+            </div>
+             
+        </section>
+        <!-- HERO SECTION ENDS  -->
+        
+        <!-- ABOUT SECTION STARTS  -->
+        <section class="container-fluid mb-5 min-vh-100 text-white" id="about">
+            
+            <!-- HERO SECTION ACTION BUTTONS VISIBLE ON MOBILE -->
+            <div class="row d-block d-md-none vw-100 text-start text-sm-center mt-3 action-btns">
+                <div class="col-12">
+                    <div class="btn-group-sm">
+                        <label for="router" class="btn btn-outline-success me-2 mobile-hire-btn">Hire Me</label>
+                        <button type="button" class="btn btn-outline-success explore-btn">Explore More</button>
+                    </div>
+                </div>
+            </div>
+            <!-- HERO SECTION ACTION BUTTONS VISIBLE ON MOBILE ENDS-->
+            
+            <div class="container about-wrapper px-3 bg-primary rounded">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-12 d-flex justify-content-center align-items-center flex-column col-md-6">
+                        <div class="text-center my-image mb-5">
+                            <img src="./assets/me.png" alt="Ye Htet" class="img-fluid">      
+                        </div>
+                        <div class="contact-info text-center py-2">
+                            <p class="fs-5 fw-light">
+                                <i class="fa-solid fa-user"></i><span class="text-white-50 ms-3">Ye Htet</span>
+                            </p>
+                            <p class="fs-5 fw-light">
+                                <i class="fa-solid fa-location-dot"></i><span class="text-white-50 ms-3">Yangon, Myanmar</span>
+                            </p>
+                            <p class="fs-5 fw-light">
+                                <i class="fa-solid fa-phone-flip"></i><span class="text-white-50 ms-3">959780209363</span>
+                            </p>
+                            <p class="fs-5 fw-light">
+                                <i class="fa-solid fa-envelope"></i><span class="text-white-50 ms-3">yhtet1934@gmail.com</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 align-self-center">
+                        <div class="about-content text-start text-md-end">
+                            <div class="heading about-heading">
+                                <p class="text-secondary mb-0 ls"></p>
+                                <h3 class="mb-2">Who Am I?</h3>
+                            </div>
+                            <p class="about-paragraph text-white-50 about-content-text fw-light">Hi, my name is <span class="text-success">Ye Htet</span>. I’m  frontend developer eager to work in a team fulltime 
+                                or as a freelancer. I am really passionate about web development and keen on
+                                <span class="text-success">learning new things</span> related to this field.I’ve acquired enough skills and knowledge
+                                to build outstanding websites.</p>
+                            <p class="about-paragraph text-white-50 about-content-text fw-light">
+                                <span class="text-success fw-bold">Currently</span>, I’m working on <span class="text-success">REACT</span> although I’ve already built some React Projects
+because REACT is a powerful framework when it’s come to frontend development.
+                            </p>
+                            <p class="about-paragraph text-white-50 about-content-text fw-light">
+                                <span class="text-success fw-bold">Later</span>, I am going to be learning <span class="text-success">Backend </span> Technologies as I want to be a fullstack 
+developer.
+                            </p>
+                            <hr>
+                            <button button type="button" class="btn btn-secondary float-start float-md-end mt-3 download-btn">Download CV</button>      
+                        </div>  
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="skills-container py-5">
+                            <div class="heading skills-heading text-center my-5">
+                                <p class="text-secondary mb-0">Checkout</p>
+                                <h4 class="display-6"></h4>
+                            </div>
+                            <ul class="skills overflow-hidden d-flex align-items-center justify-content-center flex-wrap list-unstyled">
+                                <li class="p-3 skill-item"><img class="img-fluid" src="./assets/skills/html-5.png" alt=""></li>
+                                <li class="p-3 skill-item"><img class="img-fluid" src="./assets/skills/css-3.png" alt=""></li>
+                                <li class="p-3 skill-item"><img class="img-fluid" src="./assets/skills/java-script.png" alt=""></li>
+                                <li class="p-3 skill-item"><img class="img-fluid" src="./assets/skills/bootstrap.png" alt=""></li>
+                                <li class="p-3 skill-item"><img class="img-fluid" src="./assets/skills/jquery.png" alt=""></li>
+                                <li class="p-3 skill-item"><img class="img-fluid" src="./assets/skills/react.png" alt=""></li>
+                                <li class="p-3 skill-item"><img class="img-fluid" src="./assets/skills/material-ui-logo.png" alt=""></li>
+                                <!-- <li class="p-3 skill-item"><img class="img-fluid" src="./access/skills/figma-1-logo-png-transparent.png" alt=""></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>              
+        </section>
+        <!-- ABOUT SECTION ENDS  -->
+
+        <!-- PROFOLIO SECTION STARTS -->
+        <section class="container-fluid" id="projects">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="heading text-center projects-heading">
+                            <p class="text-secondary mb-0"></p>
+                            <h3 class="display-6">PROJECTS</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-container">
+                    <!-- PROJECT 1 -->
+                    <div class="row py-5 gy-4 project" id="project1">
+                        <div class="col-12 col-lg-6">
+                            <div class="project-image shadow-lg">
+                                <img src="./assets/projects/travel-advisor.jpg" alt="Travel Advisor" class="img-fluid">
+                                <div class="project-demo d-flex justify-content-center align-items-center">
+                                    <a href="#" title="Demo" class="me-3"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="#" title="Code"><i class="fa-solid fa-code"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="project-detail">
+                                <h4 class="fw-normal project-name">TRAVEL ADVISOR <span class="project-title-underline"></span></h4>
+                                <p class="fw-lighter fs-6 text-black">
+                                    Travel Advisor is one of my favourite projects I’ve ever built.
+                                    You can find restaurants, hotels and attractions around
+                                    you. The fact that why I like is because of the following
+                                    reasons-
+                                </p>
+                                <ul class="fw-lighter fs-6 text-black list-unstyled">
+                                    <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-success me-2"></i><span>Built using a combinaiton of different APIs and advance technologies</span></li>
+                                    <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-success me-2"></i><span>A Real-World project and I use it sometimes on my own</span></li>
+                                    <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-success me-2"></i><span>Easy to use ( User Friendly )</span></li>
+                                </ul>
+                                <p class="">Technologies <br> <span class="text-black-50">Following are the techologies used in this project.</span></p>
+                                <div class="tech-in-project">
+                                    <img src="./assets/skills/react.png" alt="React" class="img-fluid">
+                                    <img src="./assets/skills/material-ui-logo.png" alt="Material UI" class="img-fluid">
+                                    <img src="./assets/google-map-api.png" alt="Google Map API" class="img-fluid">
+                                    <img src="./assets/rapid-apisvg.svg" alt="Rapid API" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2 -->
+                    <div class="row py-5 gy-4 project" id="project2">
+                        <div class="col-12 col-lg-6">
+                            <div class="project-detail">
+                                <h4 class="fw-normal project-name">TRAVEL ADVISOR <span class="project-title-underline"></span></h4>
+                                <p class="fw-lighter fs-6 text-black">
+                                    Travel Advisor is one of my favourite projects I’ve ever built.
+                                    You can find restaurants, hotels and attractions around
+                                    you. The fact that why I like is because of the following
+                                    reasons-
+                                </p>
+                                <ul class="fw-lighter fs-6 text-black">
+                                    <li>Built using a combinaiton of different APIs and advance technologies</li>
+                                    <li>A Real-World project and I use it sometimes on my own</li>
+                                    <li>Easy to use ( User Friendly )</li>
+                                </ul>
+                                <p class="">Technologies <br> <span class="text-black-50">Following are the techologies used in this project.</span></p>
+                                <div class="tech-in-project">
+                                    <img src="./assets/skills/react.png" alt="React" class="img-fluid">
+                                    <img src="./assets/skills/material-ui-logo.png" alt="Material UI" class="img-fluid">
+                                    <img src="./assets/google-map-api.png" alt="Google Map API" class="img-fluid">
+                                    <img src="./assets/rapid-apisvg.svg" alt="Rapid API" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="project-image">
+                                <img src="./assets/projects/travel-advisor.jpg" alt="Travel Advisor" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3 -->
+                    <div class="row py-5 gy-4 project" id="project3">
+                        <div class="col-12 col-lg-6">
+                            <div class="project-image">
+                                <img src="./assets/projects/travel-advisor.jpg" alt="Travel Advisor" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="project-detail">
+                                <h4 class="fw-normal project-name">TRAVEL ADVISOR <span class="project-title-underline"></span></h4>
+                                <p class="fw-lighter fs-6 text-black">
+                                    Travel Advisor is one of my favourite projects I’ve ever built.
+                                    You can find restaurants, hotels and attractions around
+                                    you. The fact that why I like is because of the following
+                                    reasons-
+                                </p>
+                                <ul class="fw-lighter fs-6 text-black">
+                                    <li>Built using a combinaiton of different APIs and advance technologies</li>
+                                    <li>A Real-World project and I use it sometimes on my own</li>
+                                    <li>Easy to use ( User Friendly )</li>
+                                </ul>
+                                <p class="">Technologies <br> <span class="text-black-50">Following are the techologies used in this project.</span></p>
+                                <div class="tech-in-project">
+                                    <img src="./assets/skills/react.png" alt="React" class="img-fluid">
+                                    <img src="./assets/skills/material-ui-logo.png" alt="Material UI" class="img-fluid">
+                                    <img src="./assets/google-map-api.png" alt="Google Map API" class="img-fluid">
+                                    <img src="./assets/rapid-apisvg.svg" alt="Rapid API" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PROFOLIO SECTION ENDS -->
+
+        <!-- CONTACT SECTION STARTS -->
+        <section class="container-fluid" id="contact">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="heading contact-heading text-center">
+                            <p class="text-secondary mb-0" ></p>
+                            <h3 class="display-6 text-white">CONTACT</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container py-4">
+                    <form action="mailto:yhtet1934@gmail.com" method="post" enctype="text/plain" class="form p-3 mx-auto">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control text-white border-0 bg-primary" name="name" placeholder="Name">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control text-white border-0 bg-primary " name="email" placeholder="Enter Email">
+                        </div>
+                        <div class="input-group mb-3">
+                            <textarea name="message" class="form-control text-white border-0 bg-primary" rows="0" cols="12" placeholder="Your Message"></textarea>
+                        </div>
+                        <input type="submit" class="submit-message-btn btn btn-outline-secondary px-4 float-end"></input>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT SECTION ENDS -->
+    </main>
+
+
+    <!-- FOOTER SECTION STARTS -->
+    <footer class="container-fluid bg-primary text-white" id="footer">
+        <div class="container text-center py-5">
+            <p class="fs-3 opacity-75">
+                Living, learning, & leveling up <br>
+                one day at a time.
+            </p>
+            <div class="footer-socials my-5 fs-4">
+                <i class="fa-brands fa-linkedin-in mx-4"></i>
+                <i class="fa-brands fa-github mx-4"></i>
+                <i class="fa-solid fa-envelope mx-4"></i>
+            </div>
+            <p><span class="fw-light">Handcrafted by Ye Htet </span> <span class="text-secondary">&#169;2022</span></p>
+            <p class="d-flex align-items-center justify-content-center g-2 text-white-50"> <span class="me-2 text-nowrap">Made with</span> <span class=" fs-3 text-uppercase"><i class="fa-brands fa-bootstrap"></i> bootstrap</span></p>
+            <p class="d-flex align-items-center justify-content-center g-2 text-white-50"> <span class="me-2 text-nowrap">Made with</span> <span class=" fs-3 text-uppercase"><img src="./assets/gsap.png" width="50" alt="gsap" class="img-fluid" /> GSAP</span></p>
+        </div>
+    </footer>
+    <!-- FOOTER SECTION ENDS -->
+
+    <script src="./gsap-public/minified/TextPlugin.min.js"></script>
+    <script src="./gsap-public/minified/ScrollToPlugin.min.js"></script>
+    <script src="./gsap-public/minified/ScrollTrigger.min.js"></script>
+    <script src="./gsap-public/minified/gsap.min.js"></script>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./app.js" type="module"></script>
+</body>
+</html>
