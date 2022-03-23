@@ -12295,7 +12295,7 @@ fieldset:disabled .btn {
 }
 
 #home .hero-content .description {
-  font-weight: 300;
+  font-weight: 450;
   color: #fff9;
   line-height: 1.7;
   font-size: 1.5em;
@@ -12315,20 +12315,20 @@ fieldset:disabled .btn {
   }
 }
 
-.action-btns {
+#about .action-btns {
   cursor: pointer;
   position: absolute;
   opacity: 0;
   z-index: 1;
 }
 
-.action-btns .mobile-hire-btn {
+#about .action-btns .mobile-hire-btn {
   cursor: pointer;
   position: relative;
   overflow: hidden;
 }
 
-.action-btns .mobile-hire-btn:before {
+#about .action-btns .mobile-hire-btn:before {
   content: '';
   position: absolute;
   width: 100%;
@@ -12342,11 +12342,11 @@ fieldset:disabled .btn {
   transition: all .3s ease-out;
 }
 
-.action-btns .mobile-hire-btn:hover:before {
+#about .action-btns .mobile-hire-btn:hover:before {
   left: 0;
 }
 
-.action-btns .mobile-hire-btn:hover {
+#about .action-btns .mobile-hire-btn:hover {
   background-color: transparent !important;
 }
 
@@ -12359,14 +12359,10 @@ fieldset:disabled .btn {
   height: 30vw;
   border: 5px solid #0dcaf0;
   border-radius: 50%;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
   position: relative;
-  -webkit-transform: scale(0) translateY(150px);
-          transform: scale(0) translateY(150px);
   opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 #about .about-wrapper .my-image:before {
@@ -12380,15 +12376,11 @@ fieldset:disabled .btn {
   border: 75px solid transparent;
   border-bottom-color: #1B242F;
   z-index: 2;
-  -webkit-transform: translateZ(500px) scale(0.5);
-          transform: translateZ(500px) scale(0.5);
 }
 
 #about .about-wrapper .my-image img {
   height: 150%;
   margin-top: -36%;
-  -webkit-transform: translateZ(500px) scale(0.5);
-          transform: translateZ(500px) scale(0.5);
 }
 
 #about .about-wrapper .about-content .heading h3, #about .about-wrapper .about-content .heading .h3 {
@@ -12437,6 +12429,16 @@ fieldset:disabled .btn {
   min-width: 1em;
 }
 
+#about .about-wrapper .contact-info {
+  -webkit-transform: translateX(-800px);
+          transform: translateX(-800px);
+}
+
+#about .about-wrapper .download-btn {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
 @media screen and (min-width: 992px) {
   #about .about-wrapper {
     padding-top: 9em !important;
@@ -12457,6 +12459,8 @@ fieldset:disabled .btn {
   margin: auto;
   position: relative;
   overflow: hidden;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
 }
 
 #projects .projects-container .project-image .project-demo {
@@ -12499,6 +12503,11 @@ fieldset:disabled .btn {
 #projects .projects-container .project-image .project-demo a[title='Code'] i {
   -webkit-transform: translateY(200px);
           transform: translateY(200px);
+}
+
+#projects .projects-container .project-image:hover {
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset !important;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset !important;
 }
 
 #projects .projects-container .project-image:hover .project-demo {
@@ -12544,6 +12553,12 @@ fieldset:disabled .btn {
   margin-top: 5em;
 }
 
+#projects .projects-container .project-detail p {
+  color: #0008 !important;
+  font-weight: normal !important;
+  font-size: 1.2em;
+}
+
 #projects .projects-container .project-detail .tech-in-project img {
   width: 3rem;
 }
@@ -12554,6 +12569,9 @@ fieldset:disabled .btn {
   }
   #projects .project:not(:last-child):before {
     margin-top: 3em;
+  }
+  #projects .project-image {
+    margin: 0 !important;
   }
 }
 
@@ -12579,6 +12597,7 @@ fieldset:disabled .btn {
 
 #contact form {
   max-width: 500px;
+  overflow: hidden;
 }
 
 #contact form textarea {
@@ -12632,61 +12651,3 @@ fieldset:disabled .btn {
 }
 
 /* FOOTER SECTION ENDS */
-#router {
-  z-index: -2;
-  opacity: 0;
-}
-
-#router:checked + .hire-me-page {
-  display: none !important;
-}
-
-/* HIRE ME PAGE STARTS */
-.hire-me-page {
-  background: #fff;
-  -webkit-perspective: 100px;
-          perspective: 100px;
-}
-
-.hire-me-page .back-page-btn {
-  position: absolute;
-  top: 2em;
-  left: 2em;
-  outline: none;
-  border: none;
-}
-
-.hire-me-page .transition-wrapper {
-  position: relative;
-}
-
-.hire-me-page .transition-wrapper .outer {
-  background-color: rgba(227, 27, 109, 0.2);
-  margin: 3em 0;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
-}
-
-.hire-me-page .transition-wrapper .outer .middle {
-  background-color: rgba(227, 27, 109, 0.5);
-  -webkit-transform: translate(10px, -10px);
-          transform: translate(10px, -10px);
-}
-
-.hire-me-page .transition-wrapper .outer .middle .inner {
-  background-color: rgba(227, 27, 109, 0.8);
-  -webkit-transform: translate(10px, -10px);
-          transform: translate(10px, -10px);
-}
-
-.hire-me-page .transition-wrapper .outer .middle .inner .inner-most {
-  background-color: #fff;
-  -webkit-transform: translate(20px, -10px);
-          transform: translate(20px, -10px);
-}
-
-.hire-me-page .transition-wrapper .outer .middle .inner .inner-most .form-control:focus {
-  border: 1px solid #1B242F !important;
-}
-
-/* HIRE ME PAGE ENDS */

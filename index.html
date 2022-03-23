@@ -27,13 +27,22 @@
 
     <!-- LOADING SPINNER --> 
     <style>
+        .spinner-wrapper {
+            height: 100vh;
+            width: 100vw;
+            background: #1B242F;
+            z-index: 1000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
         .center {
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #1B242F;
-            z-index: 1000;
         }
         .wave {
             width: 5px;
@@ -100,7 +109,7 @@
 
     <title>Ye Htet Personal Profolio</title>
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -114,9 +123,11 @@
                     <li class="nav-item"><a class="text-reset ms-3 py-3 text-decoration-none opacity-75" href="#projects"><h2 class="absolute-center">Projects</h2><h2 class="absolute-center">Projects</h2></a></li>
                     <li class="nav-item"><a class="text-reset ms-3 py-3 text-decoration-none opacity-75" href="#contact"><h2 class="absolute-center">Contact</h2><h2 class="absolute-center">Contact</h2></a></li>
                 </ul>
-                <label for="router" class="navbar-hire-btn btn btn-outline-success btn-md d-none d-md-block px-4 text-nowrap">
-                    Hire Me
-                </label>
+                <a href="hire.html" class="text-decoration-none">
+                    <button type="button" class="navbar-hire-btn btn btn-outline-success btn-md d-none d-md-block px-4 text-nowrap">
+                        Hire Me
+                    </button>
+                </a>
                 <!-- Mobile Menu Toggeler -->
                 <div class="mobile-menu-btn d-block d-md-none">
                     <div class="line line-1 bg-white"></div>
@@ -127,63 +138,7 @@
         </div>
     </div>
 
-    <!-- PAGE ROUTE TOOGLER STARTS -->
-    <input type="checkbox" id="router" name="router" checked>
-    <!-- PAGE ROUTE TOOGLER ENDS-->
-
-    <!-- HIRE ME PAGE STARTS -->
-    <div class="hire-me-page container-fluid d-flex justify-content-center align-items-center vh-100 vw-100 position-fixed top-0 bottom-0 start-0" style="z-index: 2000">
-        <label for="router" class="back-page-btn btn btn-primary">
-            <i class="fa-solid fa-house"></i>
-        </label>
-        <div>
-            <h3 class="text-primary mb-3 display-6">THANKS FOR GIVING ME A CHANCE</h3>
-            <div class="transition-wrapper">
-                <span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span><span class="tilt-span"></span>
-                <div class="outer rounded">
-                    <div class="middle rounded">
-                        <div class="inner rounded">
-                            <div class="inner-most p-3 shadow-sm row rounded">
-                                <div class="col-12">
-                                    <form class="form mb-3" action="mailto:yhtet1934@gmail.com" method="post" enctype="text/plain">
-                                        <small class="fw-bold pb-2 d-block">Send me a Message</small>
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control mb-3" id="floatingName" placeholder="Name">
-                                            <label for="floatingName">Your Name</label>
-                                        </div>
-                                        <div class="form-floating mb-3">
-                                            <input type="text" class="form-control mb-3" id="floatingInput" placeholder="name@example.com">
-                                            <label for="floatingInput">Subject</label>
-                                        </div>
-                                        <div class="form-floating mb-3">
-                                            <textarea class="form-control mb-3" id="floatingMessage" rows="20" placeholder="Message"></textarea>
-                                            <label for="floatingMessage">Message</label>
-                                        </div>
-                                        <input type="submit" value="Send" class="hire-message-submit btn btn-outline-primary w-100" >
-                                    </form>
-                                </div>
-                                <div class="col-12">
-                                    <small class="fw-bold pb-2 d-block">Directly make me a call</small>
-                                    <div class="call-me d-flex align-items-center justify-content-between">
-                                        <span>+959780209363</span>
-                                        <a href="tel:959780209363" class="text-decoration-none">
-                                            <button type="button" class="btn btn-outline-primary">
-                                                <i class="fa-solid fa-phone-flip"></i> Call Now
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- HIRE ME PAGE ENDS -->
-
-    <main>
-        
+    <!-- <main>     -->
         <!-- HERO SECTION STARTS  -->
         <section class="container-fluid vh-100 p-0 d-flex justify-content-center align-items-center" id="home">
             <div class="canvas-container">
@@ -204,8 +159,10 @@
             <div class="row d-block d-md-none vw-100 text-start text-sm-center mt-3 action-btns">
                 <div class="col-12">
                     <div class="btn-group-sm">
-                        <label for="router" class="btn btn-outline-success me-2 mobile-hire-btn">Hire Me</label>
-                        <button type="button" class="btn btn-outline-success explore-btn">Explore More</button>
+                        <a href="hire.html" title="hire-page" class="text-decoration-none">
+                            <button type="button" class="btn btn-outline-success btn-sm me-2 mobile-hire-btn">Hire Me</button>
+                        </a>
+                        <a href="#about" class="btn btn-outline-success explore-btn ">Explore More</a>
                     </div>
                 </div>
             </div>
@@ -228,7 +185,7 @@
                                 <i class="fa-solid fa-phone-flip"></i><span class="text-white-50 ms-3">959780209363</span>
                             </p>
                             <p class="fs-5 fw-light">
-                                <i class="fa-solid fa-envelope"></i><span class="text-white-50 ms-3">yhtet1934@gmail.com</span>
+                                <i class="fa-solid fa-envelope text-white"></i><span class="text-white-50 ms-3">yhtet1934@gmail.com</span>
                             </p>
                         </div>
                     </div>
@@ -251,7 +208,11 @@ because REACT is a powerful framework when it’s come to frontend development.
 developer.
                             </p>
                             <hr>
-                            <button button type="button" class="btn btn-secondary float-start float-md-end mt-3 download-btn">Download CV</button>      
+                            <a download="resume" href="./assets/cv/cv.pdf">
+                                <button button type="button" class="btn btn-secondary float-start float-md-end mt-3 download-btn">
+                                    Download CV
+                                </button>
+                            </a>    
                         </div>  
                     </div>  
                 </div>
@@ -294,7 +255,7 @@ developer.
                     <!-- PROJECT 1 -->
                     <div class="row py-5 gy-4 project" id="project1">
                         <div class="col-12 col-lg-6">
-                            <div class="project-image shadow-lg">
+                            <div class="project-image">
                                 <img src="./assets/projects/travel-advisor.jpg" alt="Travel Advisor" class="img-fluid">
                                 <div class="project-demo d-flex justify-content-center align-items-center">
                                     <a href="#" title="Demo" class="me-3"><i class="fa-solid fa-eye"></i></a>
@@ -305,18 +266,18 @@ developer.
                         <div class="col-12 col-lg-6">
                             <div class="project-detail">
                                 <h4 class="fw-normal project-name">TRAVEL ADVISOR <span class="project-title-underline"></span></h4>
-                                <p class="fw-lighter fs-6 text-black">
+                                <p class="project-p">
                                     Travel Advisor is one of my favourite projects I’ve ever built.
                                     You can find restaurants, hotels and attractions around
                                     you. The fact that why I like is because of the following
                                     reasons-
                                 </p>
-                                <ul class="fw-lighter fs-6 text-black list-unstyled">
+                                <ul class="project-p list-unstyled">
                                     <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-success me-2"></i><span>Built using a combinaiton of different APIs and advance technologies</span></li>
                                     <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-success me-2"></i><span>A Real-World project and I use it sometimes on my own</span></li>
                                     <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-success me-2"></i><span>Easy to use ( User Friendly )</span></li>
                                 </ul>
-                                <p class="">Technologies <br> <span class="text-black-50">Following are the techologies used in this project.</span></p>
+                                <p class="technologies" >Technologies <br> <span class="text-black-50">Following are the techologies used in this project.</span></p>
                                 <div class="tech-in-project">
                                     <img src="./assets/skills/react.png" alt="React" class="img-fluid">
                                     <img src="./assets/skills/material-ui-logo.png" alt="Material UI" class="img-fluid">
@@ -330,31 +291,35 @@ developer.
                     <!-- PROJECT 2 -->
                     <div class="row py-5 gy-4 project" id="project2">
                         <div class="col-12 col-lg-6">
+                            <div class="project-image">
+                                <img src="./assets/projects/travel-advisor.jpg" alt="Travel Advisor" class="img-fluid">
+                                <div class="project-demo d-flex justify-content-center align-items-center">
+                                    <a href="#" title="Demo" class="me-3"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="#" title="Code"><i class="fa-solid fa-code"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
                             <div class="project-detail">
                                 <h4 class="fw-normal project-name">TRAVEL ADVISOR <span class="project-title-underline"></span></h4>
-                                <p class="fw-lighter fs-6 text-black">
+                                <p class="project-p">
                                     Travel Advisor is one of my favourite projects I’ve ever built.
                                     You can find restaurants, hotels and attractions around
                                     you. The fact that why I like is because of the following
                                     reasons-
                                 </p>
-                                <ul class="fw-lighter fs-6 text-black">
-                                    <li>Built using a combinaiton of different APIs and advance technologies</li>
-                                    <li>A Real-World project and I use it sometimes on my own</li>
-                                    <li>Easy to use ( User Friendly )</li>
+                                <ul class="project-p list-unstyled">
+                                    <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-success me-2"></i><span>Built using a combinaiton of different APIs and advance technologies</span></li>
+                                    <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-success me-2"></i><span>A Real-World project and I use it sometimes on my own</span></li>
+                                    <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-success me-2"></i><span>Easy to use ( User Friendly )</span></li>
                                 </ul>
-                                <p class="">Technologies <br> <span class="text-black-50">Following are the techologies used in this project.</span></p>
+                                <p class="technologies" >Technologies <br> <span class="text-black-50">Following are the techologies used in this project.</span></p>
                                 <div class="tech-in-project">
                                     <img src="./assets/skills/react.png" alt="React" class="img-fluid">
                                     <img src="./assets/skills/material-ui-logo.png" alt="Material UI" class="img-fluid">
                                     <img src="./assets/google-map-api.png" alt="Google Map API" class="img-fluid">
                                     <img src="./assets/rapid-apisvg.svg" alt="Rapid API" class="img-fluid">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="project-image">
-                                <img src="./assets/projects/travel-advisor.jpg" alt="Travel Advisor" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -364,23 +329,27 @@ developer.
                         <div class="col-12 col-lg-6">
                             <div class="project-image">
                                 <img src="./assets/projects/travel-advisor.jpg" alt="Travel Advisor" class="img-fluid">
+                                <div class="project-demo d-flex justify-content-center align-items-center">
+                                    <a href="#" title="Demo" class="me-3"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="#" title="Code"><i class="fa-solid fa-code"></i></a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="project-detail">
                                 <h4 class="fw-normal project-name">TRAVEL ADVISOR <span class="project-title-underline"></span></h4>
-                                <p class="fw-lighter fs-6 text-black">
+                                <p class="project-p">
                                     Travel Advisor is one of my favourite projects I’ve ever built.
                                     You can find restaurants, hotels and attractions around
                                     you. The fact that why I like is because of the following
                                     reasons-
                                 </p>
-                                <ul class="fw-lighter fs-6 text-black">
-                                    <li>Built using a combinaiton of different APIs and advance technologies</li>
-                                    <li>A Real-World project and I use it sometimes on my own</li>
-                                    <li>Easy to use ( User Friendly )</li>
+                                <ul class="project-p list-unstyled">
+                                    <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-success me-2"></i><span>Built using a combinaiton of different APIs and advance technologies</span></li>
+                                    <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-success me-2"></i><span>A Real-World project and I use it sometimes on my own</span></li>
+                                    <li class="d-flex align-items-center"><i class="fa-solid fa-circle-check text-success me-2"></i><span>Easy to use ( User Friendly )</span></li>
                                 </ul>
-                                <p class="">Technologies <br> <span class="text-black-50">Following are the techologies used in this project.</span></p>
+                                <p class="technologies" >Technologies <br> <span class="text-black-50">Following are the techologies used in this project.</span></p>
                                 <div class="tech-in-project">
                                     <img src="./assets/skills/react.png" alt="React" class="img-fluid">
                                     <img src="./assets/skills/material-ui-logo.png" alt="Material UI" class="img-fluid">
@@ -407,7 +376,7 @@ developer.
                     </div>
                 </div>
                 <div class="form-container py-4">
-                    <form action="mailto:yhtet1934@gmail.com" method="post" enctype="text/plain" class="form p-3 mx-auto">
+                    <form action="https://formsubmit.co/yhtet1934@gmail.com" method="post" enctype="text/plain" class="form p-3 mx-auto">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control text-white border-0 bg-primary" name="name" placeholder="Name">
                         </div>
@@ -417,14 +386,13 @@ developer.
                         <div class="input-group mb-3">
                             <textarea name="message" class="form-control text-white border-0 bg-primary" rows="0" cols="12" placeholder="Your Message"></textarea>
                         </div>
-                        <input type="submit" class="submit-message-btn btn btn-outline-secondary px-4 float-end"></input>
+                        <input type="submit" class="submit-message-btn btn btn-outline-secondary px-4 float-end" />
                     </form>
                 </div>
             </div>
         </section>
         <!-- CONTACT SECTION ENDS -->
-    </main>
-
+    <!-- </main> -->
 
     <!-- FOOTER SECTION STARTS -->
     <footer class="container-fluid bg-primary text-white" id="footer">
@@ -434,24 +402,29 @@ developer.
                 one day at a time.
             </p>
             <div class="footer-socials my-5 fs-4">
-                <i class="fa-brands fa-linkedin-in mx-4"></i>
-                <i class="fa-brands fa-github mx-4"></i>
-                <i class="fa-solid fa-envelope mx-4"></i>
+                <a href="https://www.linkedin.com/in/ye-htet-1bb89b1b6/" title="linkedin" class="text-decoration-none"><i class="fa-brands fa-linkedin-in text-white mx-4"></i></a>
+                <a href="https://github.com/YeHtet214" title="github" class="text-decoration-none"><i class="fa-brands fa-github text-white mx-4"></i></a>
+                <i class="fa-solid fa-envelope text-white mx-4" id="email-btn"></i>
             </div>
             <p><span class="fw-light">Handcrafted by Ye Htet </span> <span class="text-secondary">&#169;2022</span></p>
             <p class="d-flex align-items-center justify-content-center g-2 text-white-50"> <span class="me-2 text-nowrap">Made with</span> <span class=" fs-3 text-uppercase"><i class="fa-brands fa-bootstrap"></i> bootstrap</span></p>
-            <p class="d-flex align-items-center justify-content-center g-2 text-white-50"> <span class="me-2 text-nowrap">Made with</span> <span class=" fs-3 text-uppercase"><img src="./assets/gsap.png" width="50" alt="gsap" class="img-fluid" /> GSAP</span></p>
+            <p class="d-flex align-items-center justify-content-center g-2 text-white-50"> <span class="me-2 text-nowrap">ANIMATED with</span> <span class=" fs-3 text-uppercase"><img src="./assets/gsap.png" width="50" alt="gsap" class="img-fluid" /> GSAP</span></p>
         </div>
     </footer>
     <!-- FOOTER SECTION ENDS -->
 
-    <script src="./gsap-public/minified/TextPlugin.min.js"></script>
-    <script src="./gsap-public/minified/ScrollToPlugin.min.js"></script>
-    <script src="./gsap-public/minified/ScrollTrigger.min.js"></script>
     <script src="./gsap-public/minified/gsap.min.js"></script>
+    <script src="./gsap-public/minified/TextPlugin.min.js"></script>
+    <script src="./gsap-public/minified/ScrollTrigger.min.js"></script>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./app.js" type="module"></script>
+    <script src="./app.js"></script>
+
+    <script>
+       
+    </script>
+
 </body>
+
 </html>

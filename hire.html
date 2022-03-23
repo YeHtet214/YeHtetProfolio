@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            /* background: linear-gradient(60deg,#fd61a2 -10% , #1B242F); */
+            background-color: #3C4F6A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper {
+            padding: 2em;
+            box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+        }
+        h3 {
+            margin-bottom: 1.3em;
+            color: #fff;
+            text-shadow: 0 2px #fff9;
+        }
+        .phone {
+            border-radius: 50%;
+            padding: .5em 1em;
+            background: #fff;
+            color: #3C4F6A;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+        }
+        .phone:hover {
+            transform: scale(1.15);
+            transition: .3s ease-out;
+        }
+        .hire-message-submit {
+            width: 100%;
+            display: block;
+            padding: .5em 0;
+            outline: none;
+            border: 2px solid #04C2C9;
+            position: relative;
+        }
+        a[title="home-page-back"]{
+            overflow: hidden;
+            width: 3em;
+            height: 3em;
+            display: inline-block;
+            border-radius: 50%;
+            border: 1px solid rgb(240, 46, 170);
+            position: relative;
+        }
+        a i {
+            font-size: 2em;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            color:rgb(240, 46, 170);
+        }
+        a:hover i {
+            animation: move .8s linear infinite;
+        }
+        .arrow {
+            animation-delay: .1s;
+        }
+        @keyframes move {
+            from {
+                left: 120%;
+            }
+            to {
+                left: -40%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                width: 80vw;
+            }
+            h3 {
+                font-size: 1.1em;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h3 class="">THANKS FOR GIVING ME A CHANCE</h3>
+        <form class="form mb-3" action="https://formsubmit.co/yhtet1934@gmail.com" method="post" enctype="text/plain">
+            <small class="fw-bold pb-2 d-block text-white text-decoration-underline">Send me a Message</small>
+            <div class="form-floating">
+                <input type="text" name="name" class="form-control mb-3" id="floatingName" placeholder="Name" required>
+                <label for="floatingName">Your Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" name="subject" class="form-control mb-3" id="floatingInput" placeholder="name@example.com" required>
+                <label for="floatingInput">Subject</label>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea class="form-control mb-3" name="message" id="floatingMessage" rows="12" cols="auto" placeholder="Message" required></textarea>
+                <label for="floatingMessage">Message</label>
+            </div>
+            <input type="submit" value="Send" class="hire-message-submit rounded" >
+        </form>
+        <hr class="bg-white">
+        <small class="text-white fw-bold mb-2 d-block text-decoration-underline">Directly make me a Call</small>
+        <p class="text-white d-flex justify-content-around">
+            +959780209363
+            <span class="phone"><i class="fa-solid fa-phone"></i></span>
+        </p>
+        <a href="index.html" title="home-page-back">
+            <i class="fa-solid fa-angles-left arrow1"></i>
+            <i class="fa-solid fa-angles-left arrow2"></i>
+        </a>
+    </div>
+</body>
+</html>
