@@ -385,6 +385,20 @@ $('.mobile-menu-btn').on('click', function() {
 
   animatePro();
 
+  // SMALL PROJECTS ANIMATIONS
+  const moreProjectsTL = gsap.timeline();
+  gsap.from('.more-projects', {
+    scrollTrigger: {
+      trigger: '.more-projects h4',
+      start: 'top 95%',
+      once: true,
+      onEnter: () => {
+        moreProjectsTL.from('.more-projects h4', { duration: 1, scale: 0 })
+        moreProjectsTL.from('.more-projects .title-underline', { duration: 0.5, width: 0 })
+        moreProjectsTL.from('.more-projects .small-project-card', { duration: 1, scale: 0, autoAlpha: 0, stagger: 0.25})
+      }
+    },
+  })
 
   /* CONTACT SECTION ANIMATION */
   const contactTL = gsap.timeline();

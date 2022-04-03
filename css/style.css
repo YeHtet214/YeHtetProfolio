@@ -12527,13 +12527,13 @@ fieldset:disabled .btn {
 
 #projects .projects-container .project-name .project-title-underline {
   position: absolute;
-  height: 2px;
-  width: 75%;
-  background: #04C2C9;
   bottom: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  background: #04C2C9;
+  width: 75%;
+  height: 2px;
 }
 
 #projects .projects-container .project:not(:last-child) {
@@ -12561,6 +12561,39 @@ fieldset:disabled .btn {
 
 #projects .projects-container .project-detail .tech-in-project img {
   width: 3rem;
+}
+
+#projects .more-projects h4, #projects .more-projects .h4 {
+  position: relative;
+  display: inline-block;
+}
+
+#projects .more-projects h4 .title-underline, #projects .more-projects .h4 .title-underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #E31B6D;
+  width: 75%;
+  height: 2px;
+  bottom: -0.5em;
+}
+
+#projects .more-projects .small-project-card {
+  overflow: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#projects .more-projects .small-project-card img:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+#projects .more-projects .small-project-card:hover {
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
 @media screen and (max-width: 768px) {

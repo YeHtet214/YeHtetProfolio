@@ -111,6 +111,17 @@ html {
   transform: translate(-50%, -50%);
 }
 
+// TITLE UNDERLINE STYLES
+@mixin titleUnderline($color) {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $color;
+  width: 75%;
+  height: 2px;
+}
+
 /* NAVBAR SECTION STARTS */
 .navbar {
   z-index: 111;
@@ -544,13 +555,7 @@ main {
         padding-bottom: 0.25em;
 
         .project-title-underline {
-          position: absolute;
-          height: 2px;
-          width: 75%;
-          background: $success;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
+          @include titleUnderline($success);
         }
       }
       
@@ -583,7 +588,34 @@ main {
               }
           }
       }
-       
+    }
+
+    .more-projects {
+      h4 {
+        position: relative;
+        display: inline-block;
+
+        .title-underline {
+          @include titleUnderline($secondary);
+          bottom: -0.5em;
+        }
+      }
+
+      .small-project-card {
+        overflow: hidden;
+        transition: 0.3s ease-in-out;
+
+        img {
+          &:hover {
+            transform: scale(1.03);
+          }
+        }
+
+        &:hover {
+          box-shadow:0 1rem 3rem rgba($black, .175);
+        }
+      }
+      
     }
 
   @media screen and (max-width: 768px) {
